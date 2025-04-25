@@ -1,0 +1,24 @@
+import tkinter as tk
+def click():
+   but5=tk.Button(window, text='5', bg="LightGreen")
+   but5.grid(column=0, row=1)
+def maven():
+   but6=tk.Button(window, text='6', bg="LightBlue", font="Calibri12")
+   but6.grid(column=1, row=1)
+def given():
+   but7=tk.Button(window, text='7', bg="Purple", font="Calibri13")
+   but7.grid(column=2, row=1)  
+def puted():
+   but8=tk.Button(window, text='8', bg="LightRed", font="Calibri14")
+   but8.grid(column=3, row=1)
+window=tk.Tk()
+window.title("My Buttons")
+but=tk.Button(window, text="1", bg="yellow",command=click)
+but2=tk.Button(window, text="2", bg="orange",command=maven)
+but3=tk.Button(window, text="3", bg="pink",command=given)
+but4=tk.Button(window, text="4", bg="red",command=puted)
+but.grid(column=0, row=0)
+but2.grid(column=1, row=0)
+but3.grid(column=2, row=0)
+but4.grid(column=3, row=0)
+window.mainloop()
