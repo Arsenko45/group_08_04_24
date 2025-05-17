@@ -1,0 +1,14 @@
+from bs4 import BeautifulSoup as BS4
+r=requests.get("https://uakino.me/filmy/documentaries/27504-ubyvchyi-amerykanskyi-shlub.html")
+print(type(r))
+print(r)
+r.raise_for_status()
+pprint(r)
+html=r.text
+parser=BS4(html, 'html.parser')
+element=parser.select('div#toc ul il a')
+print(element)
+for element in element:
+    title=element.getText()
+    link=element
+    print(f'Заголовок: {title}, посилання: {link} end=" "')
